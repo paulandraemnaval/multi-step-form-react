@@ -1,0 +1,48 @@
+.card-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  border-radius: 10px;
+  border: 1px solid gray;
+  width: 100%;
+  transition: background-color 0.4s ease;
+  padding: 1rem;
+}
+
+.card-container .card-text-content h6 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+}
+
+.card-container .card-text-content p {
+  color: hsl(231, 11%, 63%);
+  font-size: 13px;
+}
+
+.card-container:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-text-content {
+  display: grid;
+  margin-top: auto;
+}
+
+.card-text-content h6 {
+  margin-bottom: 0px;
+}
+
+.card-text-content p {
+  margin-bottom: 0px;
+}
+
+.year-offer {
+  color: hsl(213, 96%, 18%);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: auto 0.9fr;
+  }
+}

@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --marineBlue: hsl(213, 96%, 18%);
+  --purplishBlue: hsl(240, 100%, 27%);
+  --pastelBlue: hsl(228, 100%, 84%);
+  --lightBlue: hsl(206, 94%, 87%);
+  --strawberryRed: hsl(354, 84%, 57%);
+  --coolGray: hsl(231, 11%, 63%);
+  --lightGray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: white;
+  padding: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#next-button {
+  align-self: flex-end;
+}
+
+.container .sidebar {
+  height: 100%;
+  color: white;
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  background-image: url("assets/images/bg-sidebar-desktop.svg");
+}
+
+.container .sidebar .sidebar-item {
+  display: flex;
+  flex-direction: row;
+  width: 240px;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+.container .sidebar .sidebar-item .step-counter {
+  display: grid;
+  place-content: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transition: all 0.4s ease;
+}
+
+.container .sidebar .sidebar-item .sidebar-item-text-container {
+  margin-left: 20px;
+}
+
+.container .sidebar .sidebar-item .sidebar-item-text-container h6 {
+  color: var(--pastelBlue);
+  margin-bottom: 0px;
+  font-weight: 200;
+  font-size: 0.75rem;
+}
+
+.container .sidebar .sidebar-item .sidebar-item-text-container p {
+  color: white;
+  font-weight: 650;
+  margin-bottom: 0px;
+}
+
+.step-content {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  border-radius: 10px;
+  padding: 2.5rem 5rem 2rem;
+  min-height: 100%;
+  color: var(--purplishBlue);
+  /* #background-color: hsl(231, 11%, 63%); */
+}
+
+.container .step-content .step-header h2 {
+  margin-bottom: 0.75rem;
+  color: var(--marineBlue);
+  font-weight: 700;
+}
+
+.container .step-content .step-header p {
+  color: var(--coolGray);
+}
+
+.container .step-content .step-field .field-label {
+  color: hsl(213, 96%, 18%);
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+}
+
+.btn.btn-primary {
+  position: relative;
+  color: white;
+  background-color: var(--purplishBlue);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+}
+
+.step-content .btn:hover {
+  background-color: var(--pastelBlue);
+}
+
+.step-labels {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.required-field {
+  color: var(--strawberryRed);
+  font-weight: 600;
+}
+
+.button-container {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.container .step-content .step-field .form-control {
+  height: 45px;
+  font-weight: 500;
+  width: 100%;
+  color: var(--marineBlue);
+}
+
+.card-selector {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 170px;
+  gap: 1rem;
+}
+
+.subscription-type {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.summary {
+  display: grid;
+  background-color: var(--lightGray);
+  border-radius: 10px;
+  padding: 1.5rem;
+  min-height: max-content;
+}
+
+.plan-selected {
+  font-weight: 800;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0;
+}
+
+.change-plan {
+  margin-bottom: 1rem;
+}
+
+.change-plan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bill-header {
+  border-bottom: 1px solid var(--coolGray);
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1rem;
+}
+
+.bill {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  color: hsl(213, 96%, 18%);
+  font-weight: 800;
+}
+
+.add-on {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.add-on p {
+  color: var(--coolGray);
+  font-weight: 500;
+  font-size: 14px;
+}
+.bill p {
+  color: hsl(213, 96%, 18%);
+}
+
+.container .sidebar .sidebar-item.active {
+  background-color: white;
+  color: var(--marineBlue);
+  transition: all 0.4s ease;
+}
+
+.container .sidebar .sidebar-item.active .step-counter {
+  background-color: var(--marineBlue);
+  color: white;
+  transition: all 0.4s ease;
+}
+
+.container .sidebar .sidebar-item.active .sidebar-item-text-container h6,
+.container .sidebar .sidebar-item.active .sidebar-item-text-container p {
+  color: var(--marineBlue); /* Marine blue color */
+  transition: all 0.4s ease;
+}
+
+.total {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.total-text {
+  font-weight: 800;
+  color: var(--marineBlue);
+}
+
+.step-header.thank-you {
+  display: grid;
+  width: fit-content;
+  align-items: center;
+  justify-items: center;
+  margin-top: 20%;
+}
+
+.step-header.thank-you p {
+  text-align: center;
+}
+
+.thank-you img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block;
+    overflow-y: scroll;
+    min-height: fit-content;
+    padding: 1rem;
+    margin-top: 6rem;
+  }
+
+  .container .sidebar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30vh;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    background-image: url("assets/images/bg-sidebar-mobile.svg");
+  }
+
+  .container .sidebar .sidebar-item {
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.4s ease;
+  }
+
+  .sidebar-item-text-container {
+    display: none;
+  }
+
+  .container .step-content {
+    padding: 1rem;
+    max-height: fit-content;
+  }
+
+  .container .step-content .step-field .form-control {
+    height: 40px;
+  }
+
+  .container .step-content .step-field .field-label {
+    font-size: 12px;
+  }
+
+  .container .step-content .step-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .container .step-content .step-header p {
+    font-size: 1.25rem;
+  }
+
+  .btn.btn-primary {
+    font-size: 12px;
+  }
+
+  .btn.btn-primary:hover {
+    background-color: var(--purplishBlue);
+  }
+
+  .card-selector {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .subscription-type {
+    gap: 0.5rem;
+  }
+
+  .summary {
+    padding: 1rem;
+  }
+
+  .summary .plan-selected {
+    font-size: 1rem;
+  }
+
+  .summary .change-plan {
+    font-size: 0.75rem;
+  }
+
+  .bill-header {
+    margin-bottom: 0.5rem;
+  }
+
+  .bill {
+    font-size: 0.75rem;
+  }
+
+  .add-on p {
+    font-size: 12px;
+  }
+
+  .total {
+    padding: 0 0.5rem;
+  }
+
+  .total-text {
+    font-size: 0.75rem;
+  }
+
+  .step-header.thank-you {
+    margin-top: 10%;
+  }
+
+  .step-header.thank-you p {
+    font-size: 0.75rem;
+  }
+
+  .thank-you img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .required-field {
+    font-size: 12px;
+  }
+  .button-container {
+    position: fixed;
+    background-color: white;
+    height: fit-content;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 1rem;
+  }
+}
