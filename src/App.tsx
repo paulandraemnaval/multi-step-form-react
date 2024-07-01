@@ -226,7 +226,7 @@ function App() {
               <div className="step-field">
                 <div className="card-selector">
                   <Card
-                    image="assets/images/icon-arcade.svg"
+                    image="./assets/images/icon-arcade.svg"
                     header="Arcade"
                     subheader={`$${period === "Yearly" ? 9 * 12 : 9}/${
                       period === "Yearly" ? "yr" : "mo"
@@ -244,7 +244,7 @@ function App() {
                     isYearly={period === "Yearly" ? true : false}
                   ></Card>
                   <Card
-                    image="assets/images/icon-advanced.svg"
+                    image="./assets/images/icon-advanced.svg"
                     header="Advanced"
                     subheader={`$${period === "Yearly" ? 12 * 12 : 12}/${
                       period === "Yearly" ? "yr" : "mo"
@@ -262,7 +262,7 @@ function App() {
                     isYearly={period === "Yearly" ? true : false}
                   ></Card>
                   <Card
-                    image="assets/images/icon-pro.svg"
+                    image="./assets/images/icon-pro.svg"
                     header="Pro"
                     subheader={`$${period === "Yearly" ? 15 * 12 : 15}/${
                       period === "Yearly" ? "yr" : "mo"
@@ -431,7 +431,7 @@ function App() {
           {currentStep === 5 && (
             <>
               <div className="step-header thank-you">
-                <img src="assets\images\icon-thank-you.svg" alt="thank-you" />
+                <img src=".\assets\images\icon-thank-you.svg" alt="thank-you" />
 
                 <h2>Thank you!</h2>
                 <p>
