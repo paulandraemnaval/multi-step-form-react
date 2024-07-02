@@ -24,3 +24,9 @@ body {
     min-width: fit-content;
   }
 }
+
+@media (max-width: 800px) {
+  #root {
+    min-width: fit-content;
+  }
+}

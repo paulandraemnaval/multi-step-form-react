@@ -40,9 +40,9 @@
 }
 
 .container .sidebar .sidebar-item {
-  display: flex;
-  flex-direction: row;
-  width: 240px;
+  display: grid;
+  grid-template-columns: max-content auto;
+  min-width: fit-content;
   margin-bottom: 0.5rem;
   border-radius: 10px;
   padding: 0.75rem;
@@ -58,7 +58,7 @@
 }
 
 .container .sidebar .sidebar-item .sidebar-item-text-container {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 .container .sidebar .sidebar-item .sidebar-item-text-container h6 {
@@ -394,5 +394,18 @@
     justify-content: space-between;
     width: 100vw;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar h6 {
+    font-size: 12px;
+  }
+  .sidebar p {
+    font-size: 12px;
+  }
+
+  .required-field {
+    font-size: 12px;
   }
 }
